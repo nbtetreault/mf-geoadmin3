@@ -13,6 +13,9 @@ var capabilities = {
   'browserstack.debug' : 'true'
 }
 
+console.log(process.env.BROWSERSTACK_USER);
+console.log(process.env.BROWSERSTACK_KEY);
+
 var driver = new webdriver.Builder().
   usingServer('http://hub.browserstack.com/wd/hub').
   withCapabilities(capabilities).
