@@ -3,8 +3,9 @@ node_js:
     - "0.8"
 
 env:
-    - BROWSERSTACK_USER=oskartruffer
-    - secure: "iHXolQFukBSkhmbkLw7vF1Tpp7TIvd3rPSGIpK7NGABnZkMBDRFWrv000+NWvub+A25nMBnq7xSKX2dA9RYWfcNse6xy+bFqB7rm4+a9EVlO2h2dWJ2MmpAm3fSJXiO/44jaTe3pwWmbcBOENguIMrvwbC4u7vACuomf7mTdYeQ="
+    global:
+        - BROWSERSTACK_USER=oskartruffer
+        - secure: "iHXolQFukBSkhmbkLw7vF1Tpp7TIvd3rPSGIpK7NGABnZkMBDRFWrv000+NWvub+A25nMBnq7xSKX2dA9RYWfcNse6xy+bFqB7rm4+a9EVlO2h2dWJ2MmpAm3fSJXiO/44jaTe3pwWmbcBOENguIMrvwbC4u7vACuomf7mTdYeQ="
 
 before_script:
     - sudo pip install virtualenv
