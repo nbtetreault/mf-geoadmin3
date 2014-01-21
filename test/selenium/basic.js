@@ -8,8 +8,8 @@ var capabilities = {
   'os' : 'Windows',
   'os_version' : '7',
   'resolution' : '1280x1024', 
-  'browserstack.user' : 'oskartruffer',
-  'browserstack.key' : '6jCLw3RPpCBmpAapFhe4',
+  'browserstack.user' : process.env.BROWSERSTACK_USER,
+  'browserstack.key' : process.env.BROWSERSTACK_KEY,
   'browserstack.debug' : 'true'
 }
 
@@ -28,3 +28,5 @@ driver.getCurrentUrl().then(function(url) {
 });
 
 driver.quit();
+
+console.log("browserstack script finished. See more results or https://www.browserstack.com/automate/builds/");
