@@ -1,11 +1,10 @@
-language: node_js
+xlanguage: node_js
 node_js:
     - "0.8"
 
-before_install:
-    - npm install browserstack
-
 before_script:
+    - npm install browserstack
+    - npm install browserstack-webdriver
     - sudo pip install virtualenv
     - sudo groupadd geodata
     - make all
