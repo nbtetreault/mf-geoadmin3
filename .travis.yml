@@ -3,7 +3,7 @@ node_js:
     - "0.8"
 
 env:
-    - secure: "JAYJG0ULcUnuQL6fzuJvdGKLqdLeEflDPA+E3enKHHKNnF1BrZtGp5TfzUXxXN6+hMBB1qRbGfdaxpX5fvrMG7cF/oviiYl0WIa6e+iw425c25+9K70+IpzFxeSNrT/r7XrRfUrjmhtr5MXI05EjAR4VzgrMI9hTThcEqyjGEMM="
+    - BROWSERSTACK_USER=oskartruffer
     - secure: "iHXolQFukBSkhmbkLw7vF1Tpp7TIvd3rPSGIpK7NGABnZkMBDRFWrv000+NWvub+A25nMBnq7xSKX2dA9RYWfcNse6xy+bFqB7rm4+a9EVlO2h2dWJ2MmpAm3fSJXiO/44jaTe3pwWmbcBOENguIMrvwbC4u7vACuomf7mTdYeQ="
 
 before_script:
@@ -15,4 +15,3 @@ notifications:
     email:
         recipients:
             - re3-dev@googlegroups.com
-
