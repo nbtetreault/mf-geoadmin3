@@ -4,7 +4,7 @@ node_js:
 
 env:
     global:
-        - BROWSERSTACK_USER=oskartruffer
+        - secure: "jXRwWmwe1DI1OByS/5CYIGPRj2rCnbxZ/h66X1rLdFI5Nr2K4QsY88T6GjRhwcy8300SBJlWvawYloHxyAjm3lV6f8nSOAWePsXqhktr6mCL90jPSde2DOEBlEZy4WuBVy9S2ITYO5jieTeFTEPuouIDulDL+oPKotY7LFbTd68="
         - secure: "iHXolQFukBSkhmbkLw7vF1Tpp7TIvd3rPSGIpK7NGABnZkMBDRFWrv000+NWvub+A25nMBnq7xSKX2dA9RYWfcNse6xy+bFqB7rm4+a9EVlO2h2dWJ2MmpAm3fSJXiO/44jaTe3pwWmbcBOENguIMrvwbC4u7vACuomf7mTdYeQ="
 
 before_script:
