@@ -6,11 +6,11 @@ env:
     global:
         - BROWSERSTACK_USER=oskartruffer
         - secure: "iHXolQFukBSkhmbkLw7vF1Tpp7TIvd3rPSGIpK7NGABnZkMBDRFWrv000+NWvub+A25nMBnq7xSKX2dA9RYWfcNse6xy+bFqB7rm4+a9EVlO2h2dWJ2MmpAm3fSJXiO/44jaTe3pwWmbcBOENguIMrvwbC4u7vACuomf7mTdYeQ="
+        - CURRENT_BRANCH=$TRAVIS_BRANCH
 
 before_script:
     - sudo pip install virtualenv
     - sudo groupadd geodata
-    - export CURRENT_BRANCH=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
     - make all
 
 notifications:

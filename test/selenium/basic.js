@@ -18,7 +18,7 @@ var driver = new webdriver.Builder().
   withCapabilities(capabilities).
   build();
 
-console.log("working on branch: "+process.env.CURRENT_BRANCH);
+console.log("working on branch: "+process.env.CURRENT_BRANCH+" ("+process.env.TRAVIS_BRANCH+")");
 
 driver.get('http://map3.geo.admin.ch/');
 driver.manage().timeouts().implicitlyWait(1000);
