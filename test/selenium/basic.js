@@ -18,6 +18,8 @@ var driver = new webdriver.Builder().
   withCapabilities(capabilities).
   build();
 
+console.log("working on branch: "+process.env.CURRENT_BRANCH);
+
 driver.get('http://map3.geo.admin.ch/');
 driver.manage().timeouts().implicitlyWait(1000);
 driver.findElement(webdriver.By.xpath("//*[@type='search']")).sendKeys('Bern');
