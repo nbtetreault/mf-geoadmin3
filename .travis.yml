@@ -34,6 +34,7 @@ env:
 before_script:
     - sudo pip install virtualenv
     - sudo groupadd geodata
+    - chmod 0775 ./scripts/travis_build_key.sh
     - ./scripts/travis_build_key.sh
     - make all
     - make deploy
