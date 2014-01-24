@@ -1,4 +1,4 @@
-echo -e ">>> Building auth file..-"
+echo -e ">>> Building auth file.."
  
 if [ -z "$id_rsa_{1..23}" ]; then echo 'No $id_rsa_{1..23} found !' ; exit 1; fi
  
