@@ -13,9 +13,11 @@ base64 --decode --ignore-garbage ~/.ssh/travis_rsa_64 > ~/.ssh/id_rsa
  
 chmod 600 ~/.ssh/id_rsa
 
+cd ~/.ssh
+ls -al
+
 echo -e "authfile built!"
 
 echo -e "rsyncing to the dev env."
-rsync -e "ssh -A -i ~/.ssh/id_rsa travis@ssh0.prod.bgdi.ch ssh" -Cavz ~/prod travis@mf0.dev.bgdi.ch:/home/travis
-
+rsync -e "ssh -Aq -i ~/.ssh/id_rsa travis@ssh0.prod.bgdi.ch ssh -q" -Cavz ~/prod travis@mf0.dev.bgdi.ch:/home/travis
 
