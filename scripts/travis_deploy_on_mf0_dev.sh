@@ -19,5 +19,5 @@ ls -al
 echo -e "authfile built!"
 
 echo -e "rsyncing to the dev env."
-rsync -e "ssh -Aq -i ~/.ssh/id_rsa travis@ssh0.prod.bgdi.ch ssh -q" -Cavz ~/prod travis@mf0.dev.bgdi.ch:/home/travis
+rsync -e "ssh -A -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no travis@ssh0.prod.bgdi.ch ssh" -Cavz ~/prod travis@mf0.dev.bgdi.ch:/home/travis
 
