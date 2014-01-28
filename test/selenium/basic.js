@@ -20,13 +20,13 @@ var driver = new webdriver.Builder().
 
 console.log("working on branch: "+process.env.CURRENT_BRANCH+" ("+process.env.TRAVIS_BRANCH+")");
 
-driver.get('http://map3.geo.admin.ch/');
+driver.get('https://mf-geoadmin3.dev.bgdi.ch/travis/prod/');
 driver.manage().timeouts().implicitlyWait(1000);
 driver.findElement(webdriver.By.xpath("//*[@type='search']")).sendKeys('Bern');
 driver.findElement(webdriver.By.xpath("//*[contains(text(), 'Bern (BE)')]")).click();
 driver.sleep(2000);
 driver.getCurrentUrl().then(function(url) {
-  assert.equal(url, 'http://map3.geo.admin.ch/?X=200393.27&Y=596671.16&zoom=6&lang=en&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe');
+  assert.equal(url, 'https://mf-geoadmin3.dev.bgdi.ch/travis/prod/?X=200393.27&Y=596671.16&zoom=6&lang=en&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe');
 });
 
 driver.quit();
