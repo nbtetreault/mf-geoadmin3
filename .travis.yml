@@ -4,9 +4,9 @@ node_js:
 
 env:
     global:
-        - BROWSERSTACK_USER=oskartruffer
+        - BROWSERSTACK_USER=hanspeterchrist
         - CURRENT_BRANCH=$TRAVIS_BRANCH
-        - secure: "iHXolQFukBSkhmbkLw7vF1Tpp7TIvd3rPSGIpK7NGABnZkMBDRFWrv000+NWvub+A25nMBnq7xSKX2dA9RYWfcNse6xy+bFqB7rm4+a9EVlO2h2dWJ2MmpAm3fSJXiO/44jaTe3pwWmbcBOENguIMrvwbC4u7vACuomf7mTdYeQ="
+        - secure: "b/i7FFs88uFoeGA/YKYeLyqQuwKLvRE+PQocbMW/pU6wGh41p1k5p5+CiriBAZ7obPusRI2gg00bmGOcEQyJyNBOsh83lq55DMqyDdWCBy04hxpDye7B844Ez0ouNQ+2KQ6m+OgoIyGZ2oNG3mu/XDgTs+BRLzs1XJL9mOwaHyE="
         - secure: "mRIQ7Lj5gUtj73AtY6Lx4rHh+IeMkow6bOTuEBabuw7nPanprVP0AzGbCT36RLADSNCenObwBsMpJ8+tEf+y3S6gmWHAU+SPxf+webv+vnwLV70zUuBQ9MXNjQu/xzeM6W82cb3UIXJLFjzib1byQufwLylvm1ltzg/lxgq0wI4="
         - secure: "VhlL+pQYLHbgJWBaQ6kC7J6kPRQkr4Rn4iDJ5lm8/sapKNfzMY8DN+ddaQUmfZt3GTNK3k9/F+amEHlpspJ+AEeFQQWfT0wMngIgzqGuWocEnXnMKqjZuZl3cyoVc7Cpa8fT3MTIFIgl0XW/BSma959+dCo9Ozb3N/v3eua8z50="
         - secure: "ORLYYULEgJLl/6+P9or1/a8VnkDu8gEMK/fp5P8nQJUcSTiVS+whFG+ylfXQPNJBadhcoYDFArNsdE3d+0nw3EDnu9wlBB2dSInqpn+S2WSEloIfC7p3HT/zF3HMl0RRehe+wPs2mt6gxPxODoP3oA080kw4YcHL1QwEifGBaqo="
