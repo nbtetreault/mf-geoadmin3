@@ -18,7 +18,8 @@ var driver = new webdriver.Builder().
   withCapabilities(capabilities).
   build();
 
-console.log("working on branch: "+process.env.CURRENT_BRANCH+" ("+process.env.TRAVIS_BRANCH+")");
+console.log("Starting Browserstack script!");
+console.log("Working on branch: "+process.env.CURRENT_BRANCH+" ("+process.env.TRAVIS_BRANCH+")");
 
 driver.get('https://mf-geoadmin3.dev.bgdi.ch/travis/prod/');
 driver.manage().timeouts().implicitlyWait(1000);
@@ -29,6 +30,6 @@ driver.getCurrentUrl().then(function(url) {
   assert.equal(url, 'https://mf-geoadmin3.dev.bgdi.ch/travis/prod/?X=200393.27&Y=596671.16&zoom=6&lang=en&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe');
 });
 
-driver.quit();
+console.log("Browserstack script finished. See more results or https://www.browserstack.com/automate/builds/d740ecfdd73f04d9c0a306c35d46de373047687d/sessions/" + driver.getSessionId());
 
-console.log("browserstack script finished. See more results or https://www.browserstack.com/automate/builds/");
+driver.quit();
