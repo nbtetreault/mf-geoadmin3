@@ -16,5 +16,4 @@ chmod 600 .ssh/id_rsa
 echo -e "authfile built!"
 
 echo -e "rsyncing to the dev env."
-# old. rsync -e "ssh -A -i .ssh/id_rsa -o StrictHostKeyChecking=no travis@ssh0.prod.bgdi.ch ssh" -Cavz ./prd travis@mf0.dev.bgdi.ch:/home/travis
 rsync -e 'ssh -i .ssh/id_rsa -o StrictHostKeyChecking=no -o ProxyCommand="ssh -i .ssh/id_rsa -o StrictHostKeyChecking=no -Aq travis@ssh0.prod.bgdi.ch nc -q0 %h 22"' -Cavz ./prd travis@mf0.dev.bgdi.ch:/home/travis/sync
