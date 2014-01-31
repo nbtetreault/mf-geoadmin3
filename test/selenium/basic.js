@@ -28,7 +28,7 @@ driver.findElement(webdriver.By.xpath("//*[@type='search']")).sendKeys('Bern');
 driver.findElement(webdriver.By.xpath("//*[contains(text(), 'Bern (BE)')]")).click();
 driver.sleep(2000);
 driver.getCurrentUrl().then(function(url) {
-  assert.equal(url, 'https://mf-geoadmin3.dev.bgdi.ch/travis/prod/?X=200393.27&Y=596671.16&zoom=6&lang=en&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe');
+  assert.equal(url.substring(8,70), 'mf-geoadmin3.dev.bgdi.ch/travis/prod/?X=200393.27&Y=596671.16');
 });
 console.log("Browserstack script finished.");
 
