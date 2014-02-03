@@ -365,6 +365,9 @@
             };
             var geometry = feature.getGeometry();
             var encJSON = format.writeFeature(feature);
+            if (!encJSON.properties) {
+              encJSON.properties = {};
+            }
             encJSON.properties._gx_style = styleId;
             encFeatures.push(encJSON);
             var styles = (layer.getStyleFunction()) ?

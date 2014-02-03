@@ -228,6 +228,11 @@
                     <span  ng-class="{'selected': isMeasureActive}" translate="{{'measure'}}"></span>
                   </a>
                 </li>
+                <li><!-- Draw -->
+                  <a href=""  ng-click="isDrawActive = !isDrawActive">
+                    <span  ng-class="{'selected': isDrawActive}" translate="{{'draw'}}"></span>
+                  </a>
+                </li>
                 <li><!-- Feature Tree -->
                   <a href=""  ng-click="globals.isFeatureTreeActive = !globals.isFeatureTreeActive">
                     <span  ng-class="{'selected': globals.isFeatureTreeActive}" translate="{{(globals.isFeatureTreeActive) ? 'object_information' : 'object_information'}}"></span>
@@ -427,6 +432,16 @@
         <div ga-measure ga-measure-map="map" ga-measure-options="options" ga-measure-active="isMeasureActive"></div>
       </div>
     </div><!-- end Measure -->
+ 
+    <!-- Popup: Draw -->
+    <div ga-popup="isDrawActive"
+      ga-popup-options="{title:'Draw'}"
+      ga-draggable=".ga-popup-title"
+      id="draw-popup" >
+      <div ng-controller="GaDrawController">
+        <div ga-draw ga-draw-map="map" ga-draw-options="options" ga-draw-active="isDrawActive"></div>
+      </div>
+    </div><!-- end Draw -->
 
     <!-- Popup: Feature Tree -->
     <div ga-popup="globals.isFeatureTreeActive"

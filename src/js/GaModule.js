@@ -25,6 +25,7 @@
   goog.require('ga_featuretree');
   goog.require('ga_measure');
   goog.require('ga_profile');
+  goog.require('ga_draw');
   goog.require('ga_modal_directive');
   goog.require('ga_draggable_directive');
   goog.require('ga_placeholder_directive');
@@ -47,6 +48,8 @@
   goog.require('ga_tooltip_controller');
   goog.require('ga_featuretree_controller');
   goog.require('ga_measure_controller');
+  goog.require('ga_draw_controller');
+
 
   var module = angular.module('ga', [
     'ga_attribution',
@@ -71,6 +74,7 @@
     'ga_featuretree',
     'ga_measure',
     'ga_profile',
+    'ga_draw',
     'ga_modal_directive',
     'ga_draggable_directive',
     'ga_placeholder_directive',
@@ -94,7 +98,8 @@
     'ga_tooltip_controller',
     'ngAnimate',
     'ga_featuretree_controller',
-    'ga_measure_controller'
+    'ga_measure_controller',
+    'ga_draw_controller'
   ]);
 
   module.config(function($translateProvider, gaGlobalOptions) {

@@ -1,0 +1,28 @@
+<div class="ga-draw">
+  <div class="ga-draw-buttons">
+    <button ng-repeat="tool in options.tools"
+      ng-click="activateTool(tool)"
+      title="{{tool.description | translate}}"
+      class="btn btn-default {{tool.class}}
+      {{options[tool.options] ? 'active' : ''}}"
+      translate>{{tool.title}}</button>
+  </div>
+  <div class="ga-draw-instructions">
+    {{options.instructions | translate}}
+  </div>
+
+  <div class="ga-draw-modify">
+    <div ng-if="options.isTextActive">
+      <label translate>modify_text_label</label>: 
+      <input ng-model="options.text" type="text"/>
+    </div>
+    <div ng-if="!options.isDeleteActive">
+      <label translate>modify_color_label</label>: 
+      <select ng-model="options.color" ng-options="c.name for c in options.colors">
+      </select>
+    </div>
+    <div ng-if="options.isModifyActive || options.isDeleteActive">
+      <button ng-click="deleteFeatures()" translate>draw_delete_features</button>
+    </div>
+  </div>
+</div>
