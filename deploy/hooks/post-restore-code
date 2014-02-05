@@ -10,6 +10,8 @@ CODE_DIR=$2
 
 cd $CODE_DIR
 
+echo "let's see" $TARGET
+
 if [ -f rc_$TARGET ]; then
     source rc_$TARGET
     if [[ $CODE_DIR == */branch/* ]]; then
